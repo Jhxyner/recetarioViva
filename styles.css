@@ -1,0 +1,189 @@
+.top-header {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 5.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+}
+
+.Menu-Horizontal {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 75rem;
+}
+
+.Menu-Horizontal li {
+  display: block;
+  padding: 0.938rem 1.25rem;
+  color: black;
+}
+
+.Menu-Horizontal li:hover {
+  color: red;
+}
+
+.Menu-Horizontal li a {
+  text-decoration: none;
+}
+
+.Menu-Vertical {
+  padding: 0;
+  position: absolute;
+  display: none;
+  width: 12.5rem;
+  background-color: white;
+}
+
+.Menu-Horizontal li:hover .Menu-Vertical {
+  display: block;
+}
+
+.Menu-Vertical li:hover {
+  background-color: rgb(235, 226, 222);
+}
+
+.Menu-Vertical li {
+  display: block;
+  color: rgb(224, 123, 255);
+  padding: 0.938rem 0.938rem 0.938rem 0.938rem;
+}
+
+/*Sección Inicio*/
+.seccion-inicio {
+  padding: 3.75rem 1.25rem;
+}
+
+.cont-grl-inicio {
+  display: flex;
+  justify-content: space-between;
+  max-width: 75rem;
+  margin: 0 auto;
+  gap: 2.5rem;
+}
+
+.cont-inicio-texto {
+  flex: 1;
+}
+
+.cont-inicio-texto h2 {
+  color: rebeccapurple;
+  margin-bottom: 0.938rem;
+}
+
+.cont-inicio-texto p {
+  color: red;
+}
+
+.cont-inicio-imagenes {
+  flex: 1;
+  text-align: center;
+}
+
+.cont-inicio-imagenes img {
+  width: 100%;
+  max-width: 31.25rem;
+  border-radius: 0.625rem;
+}
+
+/*Sección Beneficios*/
+.seccion-beneficios {
+  padding: 3.75rem 1.25rem;
+}
+
+.cont-grl-beneficios {
+  display: flex;
+  justify-content: space-between;
+  max-width: 75rem;
+  margin: 0 auto;
+  gap: 2.5rem;
+}
+
+.cont-beneficios-texto {
+  flex: 1;
+}
+
+.cont-beneficios-texto h2 {
+  color: rebeccapurple;
+  margin-bottom: 0.938rem;
+}
+
+.cont-beneficios-texto p {
+  color: rgb(0, 0, 0);
+}
+
+.cont-beneficios-video {
+  flex: 1;
+  text-align: center;
+}
+
+/*Seccion formulario*/
+.seccion-formulario {
+  background-color: rgb(216, 206, 206);
+  padding: 2.5rem;
+  border: 0.188rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.div-cont-formulario {
+  background-color: rgb(201, 199, 198);
+  padding: 1.875rem;
+  border: 0.125rem solid #ffffff;
+  border-radius: 0.625rem;
+  width: 100%;
+  max-width: 31.25rem;
+}
+
+.campo {
+  border: 0.063rem;
+  padding: 0.938rem;
+  margin-bottom: 0.938rem;
+  border-radius: 0.5rem;
+  background-color: aquamarine;
+}
+
+.formularo label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: blue;
+}
+
+/*Inputs y select*/
+input[type="text"],
+select {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
+.lista-checkbox,
+.lista-radio {
+  list-style: none;
+  padding: 0.625rem;
+  margin: 0;
+  border: 0.063rem;
+  background-color: cadetblue;
+  border-radius: 0.5rem;
+}
+
+.lista-checkbox li,
+.lista-radio li {
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background-color: orange;
+  color: black;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.313rem;
+  cursor: pointer;
+}

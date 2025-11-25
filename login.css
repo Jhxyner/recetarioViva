@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Contenedor principal */
 .login-container {
   display: flex;
@@ -7,7 +13,6 @@
   width: 100%;
   /* Degradado Naranja a Verde (Marca Recetario Viva) */
   background: linear-gradient(135deg, #ff9f1c 0%, #4caf50 100%);
-  padding: 1.25rem;
 }
 
 /* La caja del formulario */
@@ -24,11 +29,14 @@
 /* --- LOGO GRANDE --- */
 .logo-container {
   margin-bottom: 1.5rem; /* Un poco más de espacio abajo del logo */
+  text-align: center;
 }
 
 .logo-img {
-  height: 10rem; /* AUMENTADO: Antes era 5rem, ahora es el doble */
+  height: auto; /* AUMENTADO: Antes era 5rem, ahora es el doble */
+  max-height: 10rem;
   width: auto;
+  max-width: 100%;
   display: block;
   margin: 0 auto; /* Asegura que esté centrado */
 }
@@ -93,28 +101,20 @@
 /* Responsive */
 @media (max-width: 600px) {
   .login-container {
-    padding: 0;
-    background: #fff;
-    align-items: flex-start;
-    min-height: auto;
+    padding: 1rem;
   }
 
   .login-box {
-    padding: 1.5rem;
-    margin-top: 2rem;
     width: 100%;
-    max-width: 100%;
-    box-shadow: none;
-    border-radius: 0;
-    border: none;
+    margin-top: 0;
+    padding: 1.5rem;
+  }
+
+  .logo-img {
+    height: 7rem;
   }
 
   .login-box h2 {
-    font-size: 1.7rem;
-    text-align: center;
-  }
-
-  .input-group input {
-    padding: 1rem;
+    font-size: 1.5rem;
   }
 }

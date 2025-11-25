@@ -1,1 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Recetario Viva</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="pie.css" />
+  </head>
+  <body>
+    <nav class="top-header">
+      <a href="#" class="logo">
+        <img height="90" src="Images/logo.png" alt="" />
+      </a>
+      <ul class="Menu-Horizontal">
+        <li><a href="#">Inicio</a></li>
+        <li class="dropdown-parent">
+          <a href="#">Recetas ▾</a>
+          <ul class="Menu-Vertical">
+            <li><a href="#">Desayunos</a></li>
+            <li><a href="#">Almuerzos</a></li>
+            <li><a href="#">Cenas</a></li>
+            <li><a href="#">Postres</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Favoritos</a></li>
+        <li><a href="#">Mi Perfil</a></li>
+      </ul>
+    </nav>
+
+    <section class="seccion-inicio">
+      <div class="cont-grl-inicio">
+        <div class="cont-inicio-texto">
+          <h2>BIENVENIDO A RECETARIO VIVA</h2>
+          <p>
+            Aquí podrás descubrir una variedad de recetas de cocina, desde las
+            más simples hasta las más sofisticadas. Navega por nuestras
+            categorías, guarda tus favoritos y cocina con pasión.
+          </p>
+          <a href="#" class="btn-primary">Ver Recetas</a>
+        </div>
+        <div class="cont-inicio-imagenes">
+          <img src="Images/recetario.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-beneficios">
+      <div class="cont-grl-beneficios">
+        <div class="cont-beneficios-texto">
+          <h2>BENEFICIOS</h2>
+          <p>
+            Recetario Viva te ofrece una forma sencilla de descubrir, guardar y
+            compartir recetas. Organiza tus platos favoritos y aprende nuevas
+            preparaciones con nuestros tutoriales.
+          </p>
+        </div>
+        <div class="cont-beneficios-video">
+          <iframe
+            src="https://www.youtube.com/embed/vIfGP6gzkEI"
+            title="Video Recetario"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-formulario">
+      <div class="div-cont-formulario">
+        <h2>Únete a nuestra comunidad</h2>
+        <p>Regístrate para guardar tus recetas favoritas</p>
+
+        <form class="formulario">
+          <div class="campo">
+            <label for="nombre">Nombres:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ej. Olivia"
+            />
+          </div>
+          <div class="campo">
+            <label for="apellidos">Apellidos:</label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              placeholder="Ej. Ramirez"
+            />
+          </div>
+          <div class="campo">
+            <label for="nombrePais">País:</label>
+            <select id="nombrePais" name="pais">
+              <option value="">Seleccione un país</option>
+              <option value="Peru">Perú</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Bolivia">Bolivia</option>
+              <option value="Chile">Chile</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Espana">España</option>
+              <option value="Mexico">México</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label>Sexo:</label>
+            <ul class="lista-radio">
+              <li>
+                <label>
+                  <input type="radio" name="genero" value="masculino" />
+                  Masculino
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="genero" value="femenino" /> Femenino
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="campo">
+            <label>Intereses:</label>
+            <ul class="lista-checkbox">
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="saludable" />
+                  Saludable</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="postres" />
+                  Postres y Repostería</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="rapida" />
+                  Cocina Rápida</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="vegana" />
+                  Vegana / Vegetariana</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="parrillas" />
+                  Parrillas y Asados</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="intereses"
+                    value="tradicional"
+                  />
+                  Cocina Tradicional</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="singluten" />
+                  Sin Gluten</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <button type="submit" class="btn-submit">Crear Cuenta</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="seccion-footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-brand">
+            <img src="Images/logo.png" alt="" class="footer-logo" />
+            <p>Frescura y sabor en tu mesa.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="/documentos/ProteccionDatos.pdf" target="_blank"
+              >Política de Privacidad</a
+            >
+            <a href="/documentos/ProteccionDatos.pdf" target="_blank"
+              >Términos y Condiciones</a
+            >
+            <a href="/documentos/ProteccionDatos.pdf" target="_blank"
+              >Protección de Datos</a
+            >
+          </div>
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                alt=""
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/733/733558.png"
+                alt=""
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                alt=""
+                class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
 

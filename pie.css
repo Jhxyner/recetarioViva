@@ -1,12 +1,10 @@
-/* Footer general */
 .footer {
-  background-color: #ce7070; /* Fondo oscuro para contraste */
+  background-color: #333333;
   color: white;
   padding: 2rem 1rem;
   font-family: "Roboto", sans-serif;
 }
 
-/* Contenedor flexible para 3 columnas */
 .footer-container {
   display: flex;
   flex-direction: row;
@@ -17,19 +15,17 @@
   gap: 2rem;
 }
 
-/* Marca o logotipo */
 .footer-brand {
   flex: 1;
   min-width: 12.5rem;
 }
 
 .footer-logo {
-  width: 3.75rem;
+  width: 6rem;
   height: auto;
   margin-bottom: 0.5rem;
 }
 
-/* Enlaces legales */
 .footer-links {
   flex: 1;
   min-width: 12.5rem;
@@ -43,10 +39,9 @@
 }
 
 .footer-links a:hover {
-  color: #000000;
+  color: #ff9f1c;
 }
 
-/* Redes sociales con íconos */
 .footer-social {
   flex: 1;
   min-width: 12.5rem;
@@ -57,13 +52,13 @@
   height: 2rem;
   margin-right: 0.5rem;
   transition: transform 0.2s ease-in-out;
+  filter: invert(1);
 }
 
 .social-icon:hover {
   transform: scale(1.2);
 }
 
-/* Responsive para pantallas pequeñas */
 @media (max-width: 48rem) {
   .footer-container {
     flex-direction: column;

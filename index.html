@@ -1,236 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Recetario Viva</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="pie.css" />
+    <title>Login - Recetario Viva</title>
+    <link rel="stylesheet" href="login.css" />
   </head>
   <body>
-    <nav class="top-header">
-      <a href="" class="logo">
-        <img height="" width="200" src="Images/logo.png" alt="" />
-      </a>
-      <ol class="Menu-Horizontal">
-        <li><a href="">Inicio</a></li>
-        <li><a href="">Beneficios</a></li>
-        <li>
-          <a href="">Favoritos</a>
-          <ul class="Menu-Vertical">
-            <li>Opción 1</li>
-            <li>Opción 2</li>
-            <li>Opción 3</li>
-          </ul>
-        </li>
-        <li><a href="">Mi perfil</a></li>
-      </ol>
-    </nav>
-    <!--Seccion Inicio-->
-    <section class="seccion-inicio">
-      <div class="cont-grl-inicio">
-        <div class="cont-inicio-texto">
-          <h2>BIENVENIDO A RECETARIO VIVA!</h2>
-          <p>
-            Aquí podrás descubrir una variedad de recetas de cocina, desde las
-            más simples hasta las más sofisticadas, adaptadas a todas tus
-            preferencias y necesidades. Navega por nuestras categorías, guarda
-            tus recetas favoritas y compártelas con tus amigos y familiares.
-            ¡Comienza a explorar y a cocinar con nosotros!
-          </p>
+    <section class="login-container">
+      <div class="login-box">
+        <div class="logo-container">
+          <img
+            src="Images/logo.png"
+            alt="Logo Recetario Viva"
+            class="logo-img"
+          />
         </div>
-        <div class="cont-inicio-imagenes">
-          <img height="" width="200" src="Images/recetario.jpg" alt="" />
-        </div>
-      </div>
-    </section>
-    <!--Seccion MiPerfil-->
-    <section class="seccion-beneficios">
-      <div class="cont-grl-beneficios">
-        <div class="cont-beneficios-texto">
-          <h2>BENEFICIOS</h2>
-          <p>
-            Recetario Viva te ofrece una forma sencilla de descubrir, guardar y
-            compartir recetas. Organiza tus platos favoritos, aprende nuevas
-            preparaciones y disfruta de una experiencia culinaria personalizada,
-            con colores y sabores que te inspirarán cada día.
-          </p>
-        </div>
-        <div class="cont-beneficios-video">
-          <iframe
-            src="https://www.youtube.com/embed/vIfGP6gzkEI"
-            title="Recetario"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
-      </div>
-    </section>
-    <!--Seccion FORMULARIO-->
-    <section class="seccion-formulario">
-      <div class="div-cont-formulario">
-        <h2>Formulario de Registro</h2>
-        <p>Complete todos los campos</p>
 
-        <form class="formulario">
-          <div class="campo">
-            <label for="nombres">Nombres:</label>
+        <h2>Acceso Restringido</h2>
+
+        <form onsubmit="return validarLogin(event);">
+          <div class="input-group">
+            <label for="email">Email</label>
             <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              placeholder="Ingrese sus nombres"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Introduce tu email"
+              required
             />
           </div>
-          <div class="campo">
-            <label for="nombres">Apellidos:</label>
+
+          <div class="input-group">
+            <label for="password">Clave de Acceso</label>
             <input
-              type="text"
-              id="nombre"
-              name="apellidos"
-              placeholder="Ingrese sus apellidos"
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Introduce la clave secreta"
+              required
             />
           </div>
-          <div class="campo">
-            <label for="pais">País:</label>
-            <select id="nombrePais" name="pais">
-              <option value="">Seleccióne un país</option>
-              <option value="Argentina">Argentina</option>
-              <option value="Bolivia">Bolivia</option>
-              <option value="Colombia">Colombia</option>
-              <option value="Ecuador">Ecuador</option>
-              <option value="Peru">Perú</option>
-            </select>
-          </div>
-          <div class="campo">
-            <label>Intereses:</label>
-            <ul class="lista-checkbox">
-              <li>
-                <label
-                  ><input
-                    type="checkbox"
-                    name="intereses"
-                    value="tecnologia"
-                  />Tecnología</label
-                >
-              </li>
-              <li>
-                <label
-                  ><input
-                    type="checkbox"
-                    name="intereses"
-                    value="educacion"
-                  />Educación</label
-                >
-              </li>
-              <li>
-                <label
-                  ><input
-                    type="checkbox"
-                    name="intereses"
-                    value="deportes"
-                  />Deportes</label
-                >
-              </li>
-              <li>
-                <label
-                  ><input
-                    type="checkbox"
-                    name="intereses"
-                    value="arte"
-                  />Arte</label
-                >
-              </li>
-              <li>
-                <label
-                  ><input
-                    type="checkbox"
-                    name="intereses"
-                    value="ciencia"
-                  />Ciencia</label
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="campo">
-            <label>Sexo:</label>
-            <ul class="lista-radio">
-              <li>
-                <label
-                  ><input
-                    type="radio"
-                    name="genero"
-                    value="masculino"
-                  />Masculino</label
-                >
-              </li>
-              <li>
-                <label
-                  ><input
-                    type="radio"
-                    name="genero"
-                    value="femenino"
-                  />Femenino</label
-                >
-              </li>
-            </ul>
-          </div>
-          <button type="submit">Enviar</button>
+
+          <button type="submit" class="login-button">Iniciar Sesión</button>
         </form>
       </div>
     </section>
-    <section class="seccion-footer">
-      <footer>
-        <div class="footer-container">
-          <a href="" class="footer-brand">
-            <img height="" width="200" src="Images/logo.png" alt="" />
-          </a>
-          <div class="footer-links">
-            <h4>Legal</h4>
-            <a href="documentos/ProteccionDatos.pdf" target="_blank"
-              >Política de Privacidad</a
-            >
-            <!-- Dentro de href llama a un documento pdf con la poltica-->
-            <a href="documentos/ProteccionDatos.pdf" target="_blank"
-              >Términos y Condiciones</a
-            >
-            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
-            <a href="documentos/ProteccionDatos.pdf" target="_blank"
-              >Protección de Datos</a
-            >
-          </div>
 
-          <!-- Redes sociales con íconos personalizados -->
-          <div class="footer-social">
-            <h4>Síguenos</h4>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
-                alt="Facebook"
-                class="social-icon"
-            /></a>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
-                alt="Instagram"
-                class="social-icon"
-            /></a>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
-                alt="LinkedIn"
-                class="social-icon"
-            /></a>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
-                alt="Twitter"
-                class="social-icon"
-            /></a>
-          </div>
-        </div>
-      </footer>
-    </section>
+    <script src="login.js"></script>
   </body>
 </html>

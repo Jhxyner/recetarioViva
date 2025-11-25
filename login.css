@@ -1,0 +1,120 @@
+/* Contenedor principal */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  /* Degradado Naranja a Verde (Marca Recetario Viva) */
+  background: linear-gradient(135deg, #ff9f1c 0%, #4caf50 100%);
+  padding: 1.25rem;
+}
+
+/* La caja del formulario */
+.login-box {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 0.938rem;
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 25rem;
+  text-align: center;
+}
+
+/* --- LOGO GRANDE --- */
+.logo-container {
+  margin-bottom: 1.5rem; /* Un poco más de espacio abajo del logo */
+}
+
+.logo-img {
+  height: 10rem; /* AUMENTADO: Antes era 5rem, ahora es el doble */
+  width: auto;
+  display: block;
+  margin: 0 auto; /* Asegura que esté centrado */
+}
+
+.login-box h2 {
+  margin-bottom: 1.5625rem;
+  color: #333;
+  font-size: 1.8rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Agrupación Label + Input */
+.input-group {
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+/* Focus color Naranja */
+.input-group input:focus {
+  border-color: #ff9f1c;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 159, 28, 0.3);
+}
+
+/* Botón Verde */
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.3125rem;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.625rem;
+}
+
+/* Hover Verde Oscuro */
+.login-button:hover {
+  background-color: #388e3c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 0;
+    background: #fff;
+    align-items: flex-start;
+    min-height: auto;
+  }
+
+  .login-box {
+    padding: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+  }
+
+  .login-box h2 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .input-group input {
+    padding: 1rem;
+  }
+}

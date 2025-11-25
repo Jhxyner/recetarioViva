@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Science Gothic", sans-serif;
 }
 
 body {
@@ -58,8 +60,31 @@ body {
   z-index: 100;
 }
 
-.dropdown-parent:hover .Menu-Vertical {
+.Menu-Vertical.activado {
   display: block;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.flecha {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+.flecha.rotar {
+  transform: rotate(180deg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .Menu-Vertical li {
@@ -235,12 +260,119 @@ select {
   background-color: #388e3c;
 }
 
-@media (max-width: 48rem) {
+.Menu-Hamburguesa {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #333333;
+}
+
+.flecha {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+.flecha.rotar {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 600px) {
+  .Menu-Hamburguesa {
+    display: block;
+  }
+
+  .Menu-Horizontal {
+    position: absolute;
+    top: 7.5rem;
+    left: -100%;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 0;
+  }
+
+  .Menu-Horizontal.active {
+    left: 0;
+  }
+
+  .Menu-Horizontal li {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .Menu-Vertical {
+    display: none;
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    background-color: #f9f9f9;
+    top: 0;
+  }
+
+  .Menu-Vertical.activado {
+    display: block;
+    animation: fadeIn 0.3s;
+  }
+
+  .dropdown-parent:hover .Menu-Vertical {
+    display: none;
+  }
+
+  .dropdown-parent:hover .Menu-Vertical.activado {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .Menu-Hamburguesa.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .Menu-Hamburguesa.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .Menu-Hamburguesa.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 700px) {
   .cont-grl-inicio,
   .cont-grl-beneficios {
     flex-direction: column;
+    text-align: center;
+    gap: 2rem;
   }
-  .Menu-Horizontal {
-    display: none;
+
+  .cont-inicio-texto,
+  .cont-inicio-imagenes,
+  .cont-beneficios-texto,
+  .cont-beneficios-video {
+    width: 100%;
+    flex: none;
   }
 }

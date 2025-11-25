@@ -1,61 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  color: #333333;
+  background-color: #f9f9f9;
+}
+
 .top-header {
-  position: relative;
-  background-color: white;
-  width: 100%;
-  height: 5.625rem;
+  background-color: #ffffff;
+  height: 7.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 1.25rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .Menu-Horizontal {
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  width: 100%;
-  max-width: 75rem;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 2rem;
 }
 
 .Menu-Horizontal li {
-  display: block;
+  position: relative;
   padding: 0.938rem 1.25rem;
-  color: black;
 }
 
-.Menu-Horizontal li:hover {
-  color: red;
-}
-
-.Menu-Horizontal li a {
+.Menu-Horizontal a {
   text-decoration: none;
+  color: #333333;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.Menu-Horizontal a:hover {
+  color: #ff9f1c;
 }
 
 .Menu-Vertical {
-  padding: 0;
-  position: absolute;
   display: none;
-  width: 12.5rem;
-  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 12.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  list-style: none;
+  z-index: 100;
 }
 
-.Menu-Horizontal li:hover .Menu-Vertical {
+.dropdown-parent:hover .Menu-Vertical {
   display: block;
-}
-
-.Menu-Vertical li:hover {
-  background-color: rgb(235, 226, 222);
 }
 
 .Menu-Vertical li {
   display: block;
-  color: rgb(224, 123, 255);
-  padding: 0.938rem 0.938rem 0.938rem 0.938rem;
+  padding: 0.938rem;
 }
 
-/*Sección Inicio*/
+.Menu-Vertical li:hover {
+  background-color: #fff3e0;
+}
+
+.Menu-Vertical li a:hover {
+  color: #ff9f1c;
+}
+
 .seccion-inicio {
   padding: 3.75rem 1.25rem;
+  background-color: #ffffff;
 }
 
 .cont-grl-inicio {
@@ -71,12 +93,27 @@
 }
 
 .cont-inicio-texto h2 {
-  color: rebeccapurple;
+  color: #ff9f1c;
   margin-bottom: 0.938rem;
+  font-size: 2.5rem;
 }
 
 .cont-inicio-texto p {
-  color: red;
+  color: #666666;
+  margin-bottom: 1.25rem;
+}
+
+.btn-primary {
+  background-color: #ff9f1c;
+  color: white;
+  padding: 0.75rem 1.875rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #e68a00;
 }
 
 .cont-inicio-imagenes {
@@ -90,9 +127,9 @@
   border-radius: 0.625rem;
 }
 
-/*Sección Beneficios*/
 .seccion-beneficios {
   padding: 3.75rem 1.25rem;
+  background-color: #f0f7f4;
 }
 
 .cont-grl-beneficios {
@@ -108,12 +145,13 @@
 }
 
 .cont-beneficios-texto h2 {
-  color: rebeccapurple;
+  color: #4caf50;
   margin-bottom: 0.938rem;
+  font-size: 2.5rem;
 }
 
 .cont-beneficios-texto p {
-  color: rgb(0, 0, 0);
+  color: #666666;
 }
 
 .cont-beneficios-video {
@@ -121,69 +159,88 @@
   text-align: center;
 }
 
-/*Seccion formulario*/
+.cont-beneficios-video iframe {
+  width: 100%;
+  height: 18.75rem;
+  border: none;
+  border-radius: 0.625rem;
+}
+
 .seccion-formulario {
-  background-color: rgb(216, 206, 206);
-  padding: 2.5rem;
-  border: 0.188rem;
+  padding: 3.75rem 1.25rem;
   display: flex;
   justify-content: center;
-  margin-bottom: 2.5rem;
+  background-image: linear-gradient(135deg, #ff9f1c 0%, #4caf50 100%);
 }
 
 .div-cont-formulario {
-  background-color: rgb(201, 199, 198);
-  padding: 1.875rem;
-  border: 0.125rem solid #ffffff;
-  border-radius: 0.625rem;
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 0.938rem;
   width: 100%;
-  max-width: 31.25rem;
+  max-width: 28.125rem;
+}
+
+.div-cont-formulario h2 {
+  text-align: center;
+  color: #333333;
+}
+
+.div-cont-formulario p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #666666;
 }
 
 .campo {
-  border: 0.063rem;
-  padding: 0.938rem;
-  margin-bottom: 0.938rem;
-  border-radius: 0.5rem;
-  background-color: aquamarine;
+  margin-bottom: 1rem;
 }
 
-.formularo label {
+.campo label {
   display: block;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: blue;
 }
 
-/*Inputs y select*/
 input[type="text"],
 select {
-  width: 95%;
-  padding: 10px;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
+  width: 100%;
+  padding: 0.625rem;
+  border: 1px solid #ddd;
+  border-radius: 0.313rem;
 }
 
+/* AQUI AGREGUÉ .lista-radio PARA QUE COMPARTA ESTILO */
 .lista-checkbox,
 .lista-radio {
   list-style: none;
   padding: 0.625rem;
-  margin: 0;
-  border: 0.063rem;
-  background-color: cadetblue;
-  border-radius: 0.5rem;
+  background-color: #f5f5f5;
+  border-radius: 0.313rem;
 }
 
-.lista-checkbox li,
-.lista-radio li {
-  margin-bottom: 0.5rem;
-}
-
-button {
-  background-color: orange;
-  color: black;
+.btn-submit {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
   border: none;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem;
   border-radius: 0.313rem;
   cursor: pointer;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.btn-submit:hover {
+  background-color: #388e3c;
+}
+
+@media (max-width: 48rem) {
+  .cont-grl-inicio,
+  .cont-grl-beneficios {
+    flex-direction: column;
+  }
+  .Menu-Horizontal {
+    display: none;
+  }
 }
